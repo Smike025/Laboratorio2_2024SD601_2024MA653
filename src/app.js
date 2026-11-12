@@ -10,6 +10,10 @@ app.use(express.json());
 // Registrar las Rutas del CRUD
 app.use('/api/usuarios', require('./routes/usuarioRoutes'));
 app.use('/api/pedidos', require('./routes/pedidoRoutes'));
+app.use('/api/usuarios', require('./routes/usuarioRoutes'));
+app.use('/api/pedidos', require('./routes/pedidoRoutes'));
+app.use('/api/detalles-pedidos', require('./routes/detallePedidoRoutes'));
+app.use('/api/reportes', require('./routes/reporteRoutes'));
 
 // Middleware global de errores
 app.use((err, req, res, next) => {
